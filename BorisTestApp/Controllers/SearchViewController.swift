@@ -12,13 +12,14 @@ class SearchViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     let tableView = UITableView()
     
-    let array = [1,4,6,8,9,5]
+    var timer: Timer?
+    
+    let networkDataFetcher = NetworkDataFetcher()
+    var searchResponse: SearchResponse?
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         view.backgroundColor = .white
 
         setupNavigationBar()
@@ -30,6 +31,7 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     private func setupElements() {
@@ -60,11 +62,15 @@ class SearchViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return searchResponse?.results.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewTrackCell.reuseId, for: indexPath) as! TableViewTrackCell
+        
+        let track = searchResponse?.results[indexPath.row]
+        cell.setup(track: track)
+        
         return cell
     }
     
@@ -79,7 +85,26 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
+        
+        timer?.invalidate() // чтобы таймер начал работать
+        
+        // логика работы таймера
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.networkDataFetcher.fetchTracks(searchText: searchText) { [weak self] (result) in
+                switch result {
+                case .success(let searchResponse):
+                    self?.searchResponse = searchResponse
+                    self?.tableView.reloadData()
+
+                case .failure(let error):
+                    self?.showAlert(title: "Error!", message: "Can't get tracks", completion: {
+                        print("Ok boss")
+                    })
+                    print(error)
+                }
+            }
+        })
     }
-    
 }
+
 

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065BC481A040A413B396D7C9 /* Pods_BorisTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF92B809A3E5064C2D6C1671 /* Pods_BorisTestApp.framework */; };
 		EE0F4F0E25433A6E00290399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F0D25433A6E00290399 /* AppDelegate.swift */; };
 		EE0F4F1025433A6E00290399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */; };
 		EE0F4F1225433A6E00290399 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F1125433A6E00290399 /* SearchViewController.swift */; };
@@ -14,9 +15,17 @@
 		EE0F4F1725433A6F00290399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1625433A6F00290399 /* Assets.xcassets */; };
 		EE0F4F1A25433A6F00290399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1825433A6F00290399 /* LaunchScreen.storyboard */; };
 		EE0F4F242543476B00290399 /* TableViewTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F232543476B00290399 /* TableViewTrackCell.swift */; };
+		EE8616AC2543EB2500CAA004 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616AB2543EB2500CAA004 /* SearchResponse.swift */; };
+		EE8616AF2543F34700CAA004 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616AE2543F34700CAA004 /* NetworkDataFetcher.swift */; };
+		EE8616B22543F88200CAA004 /* UnspashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616B12543F88200CAA004 /* UnspashResponse.swift */; };
+		EE8616BC2543FCF700CAA004 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616BB2543FCF700CAA004 /* UIViewController + Extension.swift */; };
+		EE86CD572543E55B00C6E6F1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86CD562543E55B00C6E6F1 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3F5F26EA2AA46A1F94EAAE /* Pods-BorisTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BorisTestApp.release.xcconfig"; path = "Target Support Files/Pods-BorisTestApp/Pods-BorisTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		C87A4F771B68E3D37C290FFC /* Pods-BorisTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BorisTestApp.debug.xcconfig"; path = "Target Support Files/Pods-BorisTestApp/Pods-BorisTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CF92B809A3E5064C2D6C1671 /* Pods_BorisTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BorisTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0F4F0A25433A6E00290399 /* BorisTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorisTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0F4F0D25433A6E00290399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,11 @@
 		EE0F4F1925433A6F00290399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0F4F1B25433A6F00290399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0F4F232543476B00290399 /* TableViewTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTrackCell.swift; sourceTree = "<group>"; };
+		EE8616AB2543EB2500CAA004 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		EE8616AE2543F34700CAA004 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		EE8616B12543F88200CAA004 /* UnspashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnspashResponse.swift; sourceTree = "<group>"; };
+		EE8616BB2543FCF700CAA004 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		EE86CD562543E55B00C6E6F1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065BC481A040A413B396D7C9 /* Pods_BorisTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39B17F6BCB691F616D8DDD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF92B809A3E5064C2D6C1671 /* Pods_BorisTestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		613BCFCB3003F0818C5CA7D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C87A4F771B68E3D37C290FFC /* Pods-BorisTestApp.debug.xcconfig */,
+				0E3F5F26EA2AA46A1F94EAAE /* Pods-BorisTestApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EE0F4F0125433A6E00290399 = {
 			isa = PBXGroup;
 			children = (
 				EE0F4F0C25433A6E00290399 /* BorisTestApp */,
 				EE0F4F0B25433A6E00290399 /* Products */,
+				613BCFCB3003F0818C5CA7D9 /* Pods */,
+				39B17F6BCB691F616D8DDD21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +94,51 @@
 			children = (
 				EE0F4F0D25433A6E00290399 /* AppDelegate.swift */,
 				EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */,
-				EE0F4F1125433A6E00290399 /* SearchViewController.swift */,
-				EE0F4F232543476B00290399 /* TableViewTrackCell.swift */,
+				EE86CD5B2543E56C00C6E6F1 /* Services */,
+				EE86CD592543E56500C6E6F1 /* Controllers */,
+				EE86CD5F2543E58600C6E6F1 /* Views */,
+				EE8616BB2543FCF700CAA004 /* UIViewController + Extension.swift */,
 				EE0F4F1325433A6E00290399 /* Main.storyboard */,
 				EE0F4F1625433A6F00290399 /* Assets.xcassets */,
 				EE0F4F1825433A6F00290399 /* LaunchScreen.storyboard */,
 				EE0F4F1B25433A6F00290399 /* Info.plist */,
 			);
 			path = BorisTestApp;
+			sourceTree = "<group>";
+		};
+		EE8616B42543F89E00CAA004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE8616AB2543EB2500CAA004 /* SearchResponse.swift */,
+				EE8616B12543F88200CAA004 /* UnspashResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE86CD592543E56500C6E6F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE0F4F1125433A6E00290399 /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE86CD5B2543E56C00C6E6F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE8616B42543F89E00CAA004 /* Models */,
+				EE86CD562543E55B00C6E6F1 /* NetworkService.swift */,
+				EE8616AE2543F34700CAA004 /* NetworkDataFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EE86CD5F2543E58600C6E6F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE0F4F232543476B00290399 /* TableViewTrackCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE0F4F1E25433A6F00290399 /* Build configuration list for PBXNativeTarget "BorisTestApp" */;
 			buildPhases = (
+				D4A8CD009A5DC6C408509FA9 /* [CP] Check Pods Manifest.lock */,
 				EE0F4F0625433A6E00290399 /* Sources */,
 				EE0F4F0725433A6E00290399 /* Frameworks */,
 				EE0F4F0825433A6E00290399 /* Resources */,
+				944EF58FE3663595C2D3AA25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,12 +208,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		944EF58FE3663595C2D3AA25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BorisTestApp/Pods-BorisTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BorisTestApp/Pods-BorisTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BorisTestApp/Pods-BorisTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4A8CD009A5DC6C408509FA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BorisTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE0F4F0625433A6E00290399 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8616AF2543F34700CAA004 /* NetworkDataFetcher.swift in Sources */,
+				EE8616BC2543FCF700CAA004 /* UIViewController + Extension.swift in Sources */,
+				EE8616B22543F88200CAA004 /* UnspashResponse.swift in Sources */,
+				EE86CD572543E55B00C6E6F1 /* NetworkService.swift in Sources */,
 				EE0F4F1225433A6E00290399 /* SearchViewController.swift in Sources */,
+				EE8616AC2543EB2500CAA004 /* SearchResponse.swift in Sources */,
 				EE0F4F0E25433A6E00290399 /* AppDelegate.swift in Sources */,
 				EE0F4F1025433A6E00290399 /* SceneDelegate.swift in Sources */,
 				EE0F4F242543476B00290399 /* TableViewTrackCell.swift in Sources */,
@@ -287,6 +407,7 @@
 		};
 		EE0F4F1F25433A6F00290399 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C87A4F771B68E3D37C290FFC /* Pods-BorisTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +427,7 @@
 		};
 		EE0F4F2025433A6F00290399 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E3F5F26EA2AA46A1F94EAAE /* Pods-BorisTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

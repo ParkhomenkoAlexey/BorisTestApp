@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class TableViewTrackCell: UITableViewCell {
     
@@ -24,6 +25,19 @@ class TableViewTrackCell: UITableViewCell {
         
         setupElements()
         setupConstraints()
+    }
+    
+    func setup(track: Track?) {
+        guard let track = track else { return }
+        
+        trackNameLabel.text = track.trackName
+        artistNameLabel.text = track.artistName
+        collectionNameLabel.text = track.collectionName
+        
+        guard let url = URL(string: track.artworkUrl60 ?? "") else {
+            return
+        }
+        trackImageView.sd_setImage(with: url)
     }
     
     private func setupElements() {
