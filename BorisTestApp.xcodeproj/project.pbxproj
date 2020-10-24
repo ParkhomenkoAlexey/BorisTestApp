@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EE0F4F0E25433A6E00290399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F0D25433A6E00290399 /* AppDelegate.swift */; };
 		EE0F4F1025433A6E00290399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */; };
-		EE0F4F1225433A6E00290399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F1125433A6E00290399 /* ViewController.swift */; };
+		EE0F4F1225433A6E00290399 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F1125433A6E00290399 /* SearchViewController.swift */; };
 		EE0F4F1525433A6E00290399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1325433A6E00290399 /* Main.storyboard */; };
 		EE0F4F1725433A6F00290399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1625433A6F00290399 /* Assets.xcassets */; };
 		EE0F4F1A25433A6F00290399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1825433A6F00290399 /* LaunchScreen.storyboard */; };
+		EE0F4F242543476B00290399 /* TableViewTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F232543476B00290399 /* TableViewTrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE0F4F0A25433A6E00290399 /* BorisTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorisTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0F4F0D25433A6E00290399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE0F4F1125433A6E00290399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE0F4F1125433A6E00290399 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EE0F4F1425433A6E00290399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE0F4F1625433A6F00290399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE0F4F1925433A6F00290399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0F4F1B25433A6F00290399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE0F4F232543476B00290399 /* TableViewTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				EE0F4F0D25433A6E00290399 /* AppDelegate.swift */,
 				EE0F4F0F25433A6E00290399 /* SceneDelegate.swift */,
-				EE0F4F1125433A6E00290399 /* ViewController.swift */,
+				EE0F4F1125433A6E00290399 /* SearchViewController.swift */,
+				EE0F4F232543476B00290399 /* TableViewTrackCell.swift */,
 				EE0F4F1325433A6E00290399 /* Main.storyboard */,
 				EE0F4F1625433A6F00290399 /* Assets.xcassets */,
 				EE0F4F1825433A6F00290399 /* LaunchScreen.storyboard */,
@@ -137,9 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE0F4F1225433A6E00290399 /* ViewController.swift in Sources */,
+				EE0F4F1225433A6E00290399 /* SearchViewController.swift in Sources */,
 				EE0F4F0E25433A6E00290399 /* AppDelegate.swift in Sources */,
 				EE0F4F1025433A6E00290399 /* SceneDelegate.swift in Sources */,
+				EE0F4F242543476B00290399 /* TableViewTrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
