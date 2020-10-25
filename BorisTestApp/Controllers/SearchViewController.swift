@@ -16,6 +16,8 @@ class SearchViewController: UIViewController {
     
     let networkDataFetcher = NetworkDataFetcher()
     var searchResponse: SearchResponse?
+    
+    private var footerView = FooterView()
    
 
     override func viewDidLoad() {
@@ -40,22 +42,42 @@ class SearchViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(TableViewTrackCell.self, forCellReuseIdentifier: TableViewTrackCell.reuseId)
         
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = footerView
         
-        ///// - 1 способ
-        // 1
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        // 2
         view.addSubview(tableView)
-        // 3 constraints
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
+        if scrollView.contentOffset.y > scrollView.contentSize.height / 1.7 {
+            footerView.showLoader("\(searchResponse!.results.count) треков")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
+                networkDataFetcher.fetchNextBatch { [weak self] (result) in
+                    switch result {
+                    case .success(let searchResponse):
+                        self?.searchResponse?.resultCount += searchResponse.resultCount
+                        self?.searchResponse?.results.append(contentsOf: searchResponse.results)
+                        self?.tableView.reloadData()
+
+                    case .failure(let error):
+                        self?.showAlert(title: "Error!", message: "Can't get tracks", completion: {
+                            print("Ok boss")
+                        })
+                        print(error)
+                    }
+                    self?.footerView.stopAnimating()
+                }
+            }
+        }
     }
 }
 

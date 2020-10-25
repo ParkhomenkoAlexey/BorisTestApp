@@ -10,9 +10,27 @@ import Foundation
 class NetworkDataFetcher {
     
     let networkService = NetworkService()
+    let limit = 20
+    var searchText: String = ""
+    var offset = 0
     
     func fetchTracks(searchText: String, completion: @escaping (Result<SearchResponse, Error>) -> Void) {
-        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=30"
+        offset = 0
+        self.searchText = searchText
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=\(limit)"
+        networkService.request(urlString: urlString) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.decodeJSON(type: SearchResponse.self, from: data, completion: completion)
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func fetchNextBatch(completion: @escaping (Result<SearchResponse, Error>) -> Void) {
+        offset += limit
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=\(limit)&offset=\(offset)"
         networkService.request(urlString: urlString) { [weak self] (result) in
             switch result {
             case .success(let data):

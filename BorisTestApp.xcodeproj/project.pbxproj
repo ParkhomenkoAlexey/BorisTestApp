@@ -15,6 +15,7 @@
 		EE0F4F1725433A6F00290399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1625433A6F00290399 /* Assets.xcassets */; };
 		EE0F4F1A25433A6F00290399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0F4F1825433A6F00290399 /* LaunchScreen.storyboard */; };
 		EE0F4F242543476B00290399 /* TableViewTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0F4F232543476B00290399 /* TableViewTrackCell.swift */; };
+		EE61986825453AAD009A7AB7 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61986725453AAD009A7AB7 /* FooterView.swift */; };
 		EE8616AC2543EB2500CAA004 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616AB2543EB2500CAA004 /* SearchResponse.swift */; };
 		EE8616AF2543F34700CAA004 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616AE2543F34700CAA004 /* NetworkDataFetcher.swift */; };
 		EE8616B22543F88200CAA004 /* UnspashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8616B12543F88200CAA004 /* UnspashResponse.swift */; };
@@ -35,6 +36,7 @@
 		EE0F4F1925433A6F00290399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0F4F1B25433A6F00290399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0F4F232543476B00290399 /* TableViewTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTrackCell.swift; sourceTree = "<group>"; };
+		EE61986725453AAD009A7AB7 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		EE8616AB2543EB2500CAA004 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		EE8616AE2543F34700CAA004 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		EE8616B12543F88200CAA004 /* UnspashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnspashResponse.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EE0F4F232543476B00290399 /* TableViewTrackCell.swift */,
+				EE61986725453AAD009A7AB7 /* FooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				EE8616AF2543F34700CAA004 /* NetworkDataFetcher.swift in Sources */,
 				EE8616BC2543FCF700CAA004 /* UIViewController + Extension.swift in Sources */,
 				EE8616B22543F88200CAA004 /* UnspashResponse.swift in Sources */,
+				EE61986825453AAD009A7AB7 /* FooterView.swift in Sources */,
 				EE86CD572543E55B00C6E6F1 /* NetworkService.swift in Sources */,
 				EE0F4F1225433A6E00290399 /* SearchViewController.swift in Sources */,
 				EE8616AC2543EB2500CAA004 /* SearchResponse.swift in Sources */,
